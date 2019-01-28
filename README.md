@@ -46,6 +46,8 @@ recipe.flour = '2 cups';
 recipe.flour = '1/2 cup';
 ```
 
+### Use `Object.assign()` to non-destructively assign new data
+
 A common pattern for `Object.assign()` is to provide an empty `Object` as the
 first argument. That way we're providing an entirely new `Object` instead of
 modifying or overwriting the properties of an existing `Object`. This pattern
@@ -74,6 +76,43 @@ would be modifying the original `Object`. In your browser's console, test what
 happens if the body of the above function were `return Object.assign(obj, {
 [key]: value });`. Uh oh, back to being destructive!
 
+Let's write a function for a restaurant that accepts an old menu and some
+changes we want to make and returns a new menu **without modifying the old
+menu**:
+
+```js
+function createNewMenu (oldMenu, menuChanges) {
+  return Object.assign({}, oldMenu, menuChanges);
+}
+
+const tuesdayMenu = {
+  cheesePlate: {
+    soft: 'Chèvre',
+    semiSoft: 'Gruyère',
+    hard: 'Manchego'
+  },
+  fries: 'Sweet potato',
+  salad: 'Caesar'
+};
+
+const newOfferings = {
+  cheesePlate: {
+    soft: 'Brie',
+    semiSoft: 'Fontina'
+  },
+  salad: 'Southwestern'
+};
+
+const wednesdayMenu = createNewMenu(tuesdayMenu, newOfferings);
+
+wednesdayMenu;
+// => { cheesePlate: { soft: "Brie", semiSoft: "Fontina", hard: "Manchego" }, fries: "Sweet potato", salad: "Southwestern" }
+
+tuesdayMenu;
+// => { cheesePlate: { soft: "Chèvre", semiSoft: "Gruyère", hard: "Manchego" }, fries: "Sweet potato", salad: "Caesar" }
+```
+
+Bon appétit!
 
 ## Conclusion
 
