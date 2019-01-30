@@ -46,7 +46,7 @@ recipe.flour = '2 cups';
 recipe.flour = '1/2 cup';
 ```
 
-### Use `Object.assign()` to non-destructively assign new data
+### Use `Object.assign()` to Non-destructively Assign New Data
 
 A common pattern for `Object.assign()` is to provide an empty `Object` as the
 first argument. That way we're providing an entirely new `Object` instead of
