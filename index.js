@@ -2,13 +2,13 @@
 
 // 1. For our first problem, set `Object.assign` to merge the following objects:
 // {toast: avocado}, {mimosa: sunburst orange juice}, {eggs: bacon deviled}, {pancakes: mini skewers}
-return Object.assign({toast: 'avocado'}, {mimosa: 'sunburst orange juice'}, {eggs: 'bacon deviled'}, {pancakes: 'mini skewers'});
+Object.assign({toast: 'avocado'}, {mimosa: 'sunburst orange juice'}, {eggs: 'bacon deviled'}, {pancakes: 'mini skewers'});
 
 
 // 2. For our second problem, set `Object.assign` to merge the following objects *in the following order*: 
 // {sandwich: club}, {drink: iced tea}, {sandwich: wrap}, {drink: kombucha}, {sandwich: ham and cheese}, {drink: diet coke}, {sandwich: turkey and sprouts}, {drink: iced tea}, {sandwich: chicken salad}, {drink: chicken ceasar}
 
-return Object.assign({sandwich: 'club'}, {drink: 'iced tea'}, {sandwich: 'wrap'}, {drink: 'kombucha'}, {sandwich: 'ham and cheese'}, {drink: 'diet coke'}, {sandwich: 'turkey and sprouts'}, {drink: 'iced tea'}, {sandwich: 'chicken salad'}, {sandwich: 'chicken ceasar'});
+Object.assign({sandwich: 'club'}, {drink: 'iced tea'}, {sandwich: 'wrap'}, {drink: 'kombucha'}, {sandwich: 'ham and cheese'}, {drink: 'diet coke'}, {sandwich: 'turkey and sprouts'}, {drink: 'iced tea'}, {sandwich: 'chicken salad'}, {sandwich: 'chicken ceasar'});
 
 
 
